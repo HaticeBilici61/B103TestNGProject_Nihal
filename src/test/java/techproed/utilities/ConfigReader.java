@@ -29,4 +29,8 @@ public class ConfigReader {
         String value=properties.getProperty(key);
         return value;
     }
+
+//    techpro_test_url = https://testcenter.techproeducation.com/index.php?page=form-authentication
+//    techpro_test_username = techproed
+//            techpro_test_password=SuperSecretPassword
 }
