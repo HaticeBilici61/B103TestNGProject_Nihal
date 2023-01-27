@@ -5,10 +5,11 @@ public class ConfigReader {
     //    Bu sinif configuration.properties file i okumak icin kullanilir
 //    property file i okumak icin properti objecsi kullanilir
     private static Properties properties;
+
     //    static block : ilk calisir
     static {
 //        data cekmek istedigim dosyaninin path i
-        String path="configuration.properties";
+        String path = "configuration.properties";
         try {
 //            configuration.property dosyasini acar
             FileInputStream fileInputStream = new FileInputStream(path);
@@ -22,15 +23,17 @@ public class ConfigReader {
             e.printStackTrace();
         }
     }
+
     //    ConfigReader.getProperty("browser"); -> chrome
 //    ConfigReader.getProperty("amazon_url"); -> https://www.amazon.com
 //    ConfigReader.getProperty("username"); -> ali
-    public static String getProperty(String key){
-        String value=properties.getProperty(key);
+    public static String getProperty(String key) {
+        String value = properties.getProperty(key);
         return value;
     }
+ /*
+    METHOD'U DEVREYE SOKABILMEK ICIN FileInputStream ILE DOSYA YOLUNU BELIRTMEMIZ GEREKIR
+ METHOD'DAN ONCE CALISMASI ICIN STATIC BLOCK ICERISINE FileInputStream'i OLUSTURMAMIZ GEREKIR.
+ */
 
-//    techpro_test_url = https://testcenter.techproeducation.com/index.php?page=form-authentication
-//    techpro_test_username = techproed
-//            techpro_test_password=SuperSecretPassword
 }
