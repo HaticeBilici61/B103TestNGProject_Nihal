@@ -11,7 +11,9 @@ public class ExcelUtils {
     private Workbook workBook;
     private Sheet workSheet;
     private String path;
-    public ExcelUtils(String path, String sheetName) {//This Constructor is to open and access the excel file
+
+    //Constructor:Excel path'i ve sayfaya ulasmak icin kullanilir
+    public ExcelUtils(String path, String sheetName) {
         this.path = path;
         try {
             // Opening the Excel file
