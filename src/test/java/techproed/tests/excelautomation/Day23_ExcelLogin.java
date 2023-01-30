@@ -69,7 +69,7 @@ public class Day23_ExcelLogin {
 //            kullanici sifresini gir
             ReusableMethods.waitFor(1);
             blueRentalLoginPage.passwordBox.sendKeys(data.get("password"));
-//            ligin buttonuna tikla
+//            login buttonuna tikla
             ReusableMethods.waitFor(1);
             blueRentalLoginPage.loginButton.click();
             ReusableMethods.waitFor(1);

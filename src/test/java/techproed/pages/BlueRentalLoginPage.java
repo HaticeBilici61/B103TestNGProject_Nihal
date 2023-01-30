@@ -21,4 +21,7 @@ public class BlueRentalLoginPage {
 
     @FindBy(xpath="//div[@role='alert']")
     public WebElement error_message_1;
+
+    @FindBy(xpath = "//div[text()='email must be a valid email']")
+    public WebElement emailmessage;
 }

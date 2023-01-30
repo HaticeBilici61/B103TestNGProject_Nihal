@@ -6,6 +6,8 @@ import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ExcelUtils;
 import techproed.utilities.ReusableMethods;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 public class Day24_ExcelLogin2 {
@@ -15,7 +17,7 @@ public class Day24_ExcelLogin2 {
     ExcelUtils excelUtils;
     List<Map<String, String>> excelDatalari;
     @Test
-    public void customerLogin(){
+    public void customerLogin() throws IOException {
         String path="./src/test/java/resources/mysmoketestdata.xlsx";
         String sayfa = "customer_info";
         excelUtils=new ExcelUtils(path,sayfa);
@@ -35,6 +37,11 @@ public class Day24_ExcelLogin2 {
             blueRentalLoginPage.passwordBox.sendKeys(data.get("password"));
             ReusableMethods.waitFor(1);
             blueRentalLoginPage.loginButton.click();
+            ReusableMethods.waitFor(1);
+     //     GIRIS YAPILDI
+            ReusableMethods.verifyElementDisplayed(blueRentalHomePage.userID);
+            ReusableMethods.waitFor(1);
+            ReusableMethods.getScreenshot("Ekran Goruntusu");
             ReusableMethods.waitFor(1);
             blueRentalHomePage.userID.click();
             ReusableMethods.waitFor(1);

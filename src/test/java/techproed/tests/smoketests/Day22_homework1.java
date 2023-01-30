@@ -1,10 +1,12 @@
 package techproed.tests.smoketests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import techproed.pages.BlueRentalHomePage;
 import techproed.pages.BlueRentalLoginPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
+import techproed.utilities.ReusableMethods;
 
 //Name:
 //        US100402_Negative_Login
@@ -20,17 +22,16 @@ import techproed.utilities.Driver;
 
 public class Day22_homework1 {
 
-    BlueRentalHomePage blueRentalHomePage;
-    BlueRentalLoginPage blueRentalLoginPage;
+    BlueRentalHomePage blueRentalHomePage = new BlueRentalHomePage();
+    BlueRentalLoginPage blueRentalLoginPage= new BlueRentalLoginPage();
     @Test
     public void US101122_Negative_Login(){
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
-        blueRentalHomePage = new BlueRentalHomePage();
-        blueRentalLoginPage = new BlueRentalLoginPage();
         blueRentalHomePage.loginLink.click();
-        blueRentalLoginPage.emailBox.sendKeys(ConfigReader.getProperty("invalid_email_bluecar"));
-        blueRentalLoginPage.passwordBox.sendKeys(ConfigReader.getProperty(""));
-
+        blueRentalLoginPage.emailBox.sendKeys(ConfigReader.getProperty("admin_email"));
+        blueRentalLoginPage.passwordBox.sendKeys(ConfigReader.getProperty("fake_pass"));
+        blueRentalLoginPage.loginButton.click();
+        ReusableMethods.verifyElementDisplayed(blueRentalLoginPage.error_message_1);
         //Driver.getDriver().close();
 
     }

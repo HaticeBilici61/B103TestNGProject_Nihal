@@ -23,8 +23,7 @@ public class BlueRentalHomePage {
     public WebElement OK;
 
     //odev
-    @FindBy(xpath = "//div[text()='email must be a valid email']")
-    public WebElement emailmessage;
+
 
 
     @FindBy(xpath = "//select[@name='car']")

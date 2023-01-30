@@ -20,14 +20,12 @@ public class Day22_NegativeLoginTest {
 	•
 	•User with email fake@bluerentalcars.com not found
      */
+    BlueRentalHomePage blueRentalHomePage = new BlueRentalHomePage();
+    BlueRentalLoginPage blueRentalLoginPage = new BlueRentalLoginPage();
 
-    BlueRentalHomePage blueRentalHomePage;
-    BlueRentalLoginPage blueRentalLoginPage;
     @Test
     public void US100208_Negative_Login() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
-        blueRentalHomePage = new BlueRentalHomePage();
-        blueRentalLoginPage = new BlueRentalLoginPage();
         blueRentalHomePage.loginLink.click();
         blueRentalLoginPage.emailBox.sendKeys(ConfigReader.getProperty("fake_email"));
         blueRentalLoginPage.passwordBox.sendKeys(ConfigReader.getProperty("fake_pass"));
