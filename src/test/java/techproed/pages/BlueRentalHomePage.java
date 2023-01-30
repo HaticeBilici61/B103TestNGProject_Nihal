@@ -27,4 +27,14 @@ public class BlueRentalHomePage {
     public WebElement emailmessage;
 
 
+    @FindBy(xpath = "//select[@name='car']")
+    public WebElement dropDown;
+
+    @FindBy(name = "pickUpLocation")
+    public WebElement pickUp;
+
+    @FindBy(xpath = "//*[text()='Please first login']")
+    public WebElement firstLoginMassage;
+
+
 }

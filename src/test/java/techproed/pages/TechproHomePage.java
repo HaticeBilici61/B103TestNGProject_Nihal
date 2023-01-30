@@ -12,4 +12,5 @@ public class TechproHomePage {
     @FindBy(xpath = "//*[contains(text(),'Logout')]")
     public WebElement homeLogoutButton;
 
+
 }
