@@ -36,11 +36,13 @@ public class Day22_homework3 {
                 Keys.TAB, "14.12.2023", Keys.TAB, "100", Keys.TAB, Keys.ENTER);
         ReusableMethods.waitFor(2);
         ReusableMethods.verifyElementDisplayed(blueRentalHomePage.firstLoginMassage);
+        ReusableMethods.waitFor(2);
         ReusableMethods.getScreenshot("Ekran Goruntusu");
         ReusableMethods.waitFor(2);
 
 //login yaptiktan sonra
         blueRentalHomePage.loginLink.click();
+        ReusableMethods.waitFor(2);
         blueRentalLoginPage.emailBox.sendKeys(ConfigReader.getProperty("admin_email"));
         blueRentalLoginPage.passwordBox.sendKeys(ConfigReader.getProperty("admin_sifre"));
         blueRentalLoginPage.loginButton.click();

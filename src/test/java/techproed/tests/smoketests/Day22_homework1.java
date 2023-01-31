@@ -31,7 +31,9 @@ public class Day22_homework1 {
         blueRentalLoginPage.emailBox.sendKeys(ConfigReader.getProperty("admin_email"));
         blueRentalLoginPage.passwordBox.sendKeys(ConfigReader.getProperty("fake_pass"));
         blueRentalLoginPage.loginButton.click();
+        ReusableMethods.waitForVisibility(blueRentalLoginPage.error_message_1,7);
         ReusableMethods.verifyElementDisplayed(blueRentalLoginPage.error_message_1);
+
         //Driver.getDriver().close();
 
     }
