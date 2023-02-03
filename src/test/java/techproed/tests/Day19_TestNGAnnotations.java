@@ -59,7 +59,7 @@ public class Day19_TestNGAnnotations {
     public void afterMethod(){
         System.out.println("After Method");
     }
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "regression-tests")
     public void test7(){
         System.out.println("Test 7");
     }
@@ -67,7 +67,7 @@ public class Day19_TestNGAnnotations {
     public void test2(){
         System.out.println("Test 2");
     }
-    @Test(enabled = false)
+    @Test(enabled = false,groups = "regression-tests")
     public void test3(){
         System.out.println("Test 3");
     }

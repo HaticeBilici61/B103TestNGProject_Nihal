@@ -24,7 +24,7 @@ public class Day21_TechproLoginTest {
 //    Metot : loginTest()
 
 
-    @Test
+    @Test(groups = "regression-tests")
     public void loginTest() {
         Driver.getDriver().get("https://testcenter.techproeducation.com/index.php?page=form-authentication");
         TechproLoginPage techproLoginPage = new TechproLoginPage();

@@ -52,3 +52,18 @@ Asiri guvenlikli durumlar.
 Bazi teknik user storyler sadece developerlarla alakalı olabiliyor.
 Testerlarin onların kullandigi environmentlara accesleri olmayabiliyor.
 Dolayisiyla bu grubu durumlarda biz automate edemiyoruz
+
+POM(Project Object Model)
+POM, xml dosya formatında olan ve bir projenin build edilmesinden,
+nasıl edileceğine, bağımlılıklarından, packagingine kadar proje ile ilgili
+olan her türlü bilgiyi içerisinde barındıran bir dosyadır.
+
+==========================================================================
+Maven nedir neden kullanılır?
+Maven, proje geliştirirken proje içerisinde bir standart oluşturmamızı,
+geliştirme sürecini basitleştirmemizi, dokümantasyonumuzu etkili bir şekilde oluşturmamızı,
+projemizdeki kütüphane bağımlılığını ve IDE bağımlılığını ortadan kaldırmamızı sağlayan bir araçtır.
+
+Maven nerede kullanılır?
+Maven genellikle Java platformunda yer alan komutların derlenmesi sırasında kullanılan otomasyon ve inşa aracıdır.
+Java programlama dili ile uygulama geliştirirken çeşitli kütüphaneler kullanamak isteyebiliriz.
