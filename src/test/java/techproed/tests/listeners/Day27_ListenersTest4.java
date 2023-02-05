@@ -2,8 +2,10 @@ package techproed.tests.listeners;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.SkipException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import techproed.utilities.Driver;
+@Listeners(techproed.utilities.Listeners.class)
 public class Day27_ListenersTest4 {
 
     //1. Failed test caseleri tekrar run etme islemini testNG xml file ile tum test caselere automatic olarak uygulayabiliriz.

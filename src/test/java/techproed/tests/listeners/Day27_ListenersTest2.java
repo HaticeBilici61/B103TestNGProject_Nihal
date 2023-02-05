@@ -2,9 +2,10 @@ package techproed.tests.listeners;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.SkipException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import techproed.utilities.Driver;
-
+@Listeners(techproed.utilities.Listeners.class)
 public class Day27_ListenersTest2 {
     //1. listeners paketi olustur
     //2. ListenersTest2 classi olustur
