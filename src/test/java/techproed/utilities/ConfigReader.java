@@ -1,5 +1,5 @@
 package techproed.utilities;
-import java.io.FileInputStream;
+import java.io.*;
 import java.util.Properties;
 public class ConfigReader {
     //    Bu sinif configuration.properties file i okumak icin kullanilir
@@ -31,6 +31,26 @@ public class ConfigReader {
         String value = properties.getProperty(key);
         return value;
     }
+
+    public static void setProperty(String key, String value) {
+        Properties properties = new Properties();
+        try {
+            InputStream inputStream = new FileInputStream("configuration.properties");
+            properties.load(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        properties.setProperty(key, value);
+        try {
+            OutputStream outputStream = new FileOutputStream("configuration.properties");
+            properties.store(outputStream, null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
  /*
     METHOD'U DEVREYE SOKABILMEK ICIN FileInputStream ILE DOSYA YOLUNU BELIRTMEMIZ GEREKIR
  METHOD'DAN ONCE CALISMASI ICIN STATIC BLOCK ICERISINE FileInputStream'i OLUSTURMAMIZ GEREKIR.

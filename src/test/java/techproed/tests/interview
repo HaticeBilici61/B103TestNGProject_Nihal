@@ -53,8 +53,8 @@ Bazi teknik user storyler sadece developerlarla alakalı olabiliyor.
 Testerlarin onların kullandigi environmentlara accesleri olmayabiliyor.
 Dolayisiyla bu grubu durumlarda biz automate edemiyoruz
 
-POM(Project Object Model)
-POM, xml dosya formatında olan ve bir projenin build edilmesinden,
+POM(pom xml)
+POM xml dosya formatında olan ve bir projenin build edilmesinden,
 nasıl edileceğine, bağımlılıklarından, packagingine kadar proje ile ilgili
 olan her türlü bilgiyi içerisinde barındıran bir dosyadır.
 
@@ -101,13 +101,16 @@ Java programlama dili ile uygulama geliştirirken çeşitli kütüphaneler kulla
     *BeforeSuite, BeforeGroups, BeforeTest,..
     *SoftAssertion
     *DependsOnGroups,DependsOnMethods,...
+
     *TestNG Listeners(ITestListeners,IRetryAnalyzer,IAnnotationTransformer)
         *Kodlari dinler(PASS, FAIL, SKIP)
-        *Ornegin, bir test case FAIL ettikden hemen sonra olmasini istedigimiz islemleri listenerslar yardimiyla yapabiliriz. Benim TestNG frameworkumde test case FAIL eder etmez, ekrar goruntusu alma ozelligi vardir.
+        *Ornegin, bir test case FAIL ettikden hemen sonra olmasini istedigimiz islemleri listenerslar yardimiyla yapabiliriz.
+        Benim TestNG frameworkumde test case FAIL eder etmez, ekrar goruntusu alma ozelligi vardir.
         *Bir diger ornek ise, bir testcase FAIL oldugunda birkez daha listenerslar yardimizya calistirabiliriz.
     *TestNG xml dosyalari
         *Testcase leri calistirmak icin
-            *Belirli metot, class, paket, ve guruplar icin xml dosyalari olusturup o xml dosyalarina eklemis oldugum test caseleri calistirabiliriz
+            *Belirli metot, class, paket, ve guruplar icin xml dosyalari olusturup
+            o xml dosyalarina eklemis oldugum test caseleri calistirabiliriz
         *Frameworke ek ozellikler getirmek ve ek ayarlar
             *Test gruplari olusturmak icin
             *parallel test yapmak icin
@@ -139,7 +142,36 @@ Interview Sorulari :
 Her bir release den once regression testi yapilir.
 Relase sirasinda yasanan problemlerin testi icin de tester hazir bulunur.
 Release lerde PO lar ve regression testerlar aktifdir.
--
+
+********17 subat 2023
+*****FILE UPLOAD DOSYA YUKLEME*******
+1.YOL
+1-  <input id="file-upload" type='file' name='file'>
+bu html kodu, INPUT TYPE  file-upload elementi olusturmak icin kullanilir,eger bu kod
+kullanilmis ise ;
+driver.get("https://the-internet.herokuapp.com/upload")
+//choosefile butonuna basalim
+WebElement chooseFile=driver.findElement(By.xpath(//input[@type='file']);
+//yuklemek istedigimiz dosyayi secelim
+String dosyaYolu=System.getProperty("user.home"+"Desktop/logo.jpeg";
+chooseFile.sendKeys(dosyaYolu); //!!!!!!!!!!!!!!!!!!!!
+//Upload butonuna basalim
+driver.findElement(By.id("file-submit").click();
+
+NOT:senkeys methodu ile dosya yukleme isi sadece INPUT TYPE FILE elementleri icin gecerlidir
+FILE UPLOAD ISLEMI § FARKLI SEKILDE YAPILIR
+1-  <input type='file' >====>sendekeys methodu
+2-type ="File" yoksa ;
+<button type="button">Select Files</button> //bu durumda iki secenek var
+            a) ROBOT CLASS --> selenium da Desktop islemleri icin kullanilir
+            b) Auto IT-->selnium da Desktop islemleri icin kullanilir
+
+
+
+
+
+
+
 ***********************************Almanca********************
 ======SELENIUM=====
 
